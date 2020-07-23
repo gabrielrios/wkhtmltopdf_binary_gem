@@ -29,7 +29,7 @@ suffix = case RbConfig::CONFIG['host_os']
            os_based_on_centos_7 = os.start_with?('amzn_2')
            os = 'centos_7' if os_based_on_centos_7
 
-           os_based_on_debian_9 = os =~ /deepin/.match?(os)
+           os_based_on_debian_9 = os =~ /deepin/
            os = 'debian_9' if os_based_on_debian_9
 
            architecture = RbConfig::CONFIG['host_cpu'] == 'x86_64' ? 'amd64' : 'i386'
